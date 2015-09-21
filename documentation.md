@@ -124,3 +124,20 @@ describe('skaters-names', function() {
 
 ## Using Commitizen
 - `npm i -D commitizen cz-conventional-changlog`
+
+- add `"commit": "git-cz",` to package scripts
+- add this after devDependancies
+```js
+"czConfig": {
+  "path": "node_modules/cz-conventional-changelog"
+}
+```
+
+- git add .
+- `npm run commit`
+- pick commit type
+- answer questions
+
+
+## Adding a new feature with Commitizen
+- 

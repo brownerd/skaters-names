@@ -23,8 +23,16 @@ describe('skaters-names', function() {
   })
   describe('random', function() {
     it('should return a random item for the skatersNames.all', function() {
-      var randomItem = skatersNames.random();
+      var randomItem = skatersNames.random()
       expect(skatersNames.all).to.include(randomItem)
+    })
+
+    it('should return an array of random items if passed a number', function() {
+      var randomItems = skatersNames.random(3)
+      expect(randomItems).to.have.length(3)
+      randomItems.forEach(function(item) {
+        expect(skatersNames.all).to.include(item)
+      })
     })
   })
 })
