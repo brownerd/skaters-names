@@ -140,4 +140,42 @@ describe('skaters-names', function() {
 
 
 ## Adding a new feature with Commitizen
-- 
+-
+
+
+## Using gHooks
+This will run our tests befor commiting which prevents us from pushing buggy code to the remote!
+- `npm i -D ghooks`
+- add ghook configs:
+
+```js
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test:single"
+    }
+  }
+```
+
+## Adding Code Ceverage
+- `npm i -D istanbul`
+
+- add to package scripts:
+```js
+"check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+```
+
+- and extend ghooks
+```js
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test:single && npm run check-coverage"
+    }
+  }
+```
+
+## Add code coverage reporting
+- sign up at [codecov.io](http://codecov.io)
+- `npm i-D codecov.io`
+
+- package, add another script `"code-coverage": "cat ./coverage/lcov.info | codecov",``
+- travis, add another to "after success" `- npm run report-coverage`
