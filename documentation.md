@@ -178,4 +178,4 @@ This will run our tests befor commiting which prevents us from pushing buggy cod
 - `npm i-D codecov.io`
 
 - package, add another script `"code-coverage": "cat ./coverage/lcov.info | codecov",``
-- travis, add another to "after success" `- npm run report-coverage`
+- travis, add another to "after success" `- npm run code-coverage`
