@@ -107,3 +107,20 @@ describe('skaters-names', function() {
 })
 
 ```
+
+## Semantic Version automatic
+- `npm i -D semantic-release-cli` (had to agree to some Xcode bs)
+- `semantic-release-cli setup`
+- Enter details
+
+- If you want to use CodeShip, select "Other (print tokens)"
+- Select single node
+
+- .travis.yml will be added and Version info will be removed from  Package
+- add that back in `  "version": "0.0.0-semantically-released", `
+
+- it also adds a semantic release script!
+
+
+## Using Commitizen
+- `npm i -D commitizen cz-conventional-changlog`
