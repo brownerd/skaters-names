@@ -1,5 +1,5 @@
-var expect = require('chai').expect
-var skatersNames = require('./index')
+import {expect} from 'chai'
+import skatersNames from './index'
 
 describe('skaters-names', function() {
   it('should work!', function() {
